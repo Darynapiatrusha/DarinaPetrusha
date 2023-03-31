@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 650px;
+            text-indent: 20px;
+            border: 1px solid #d1d0d0;
+            border-bottom-left-radius: 20px;
+            padding: 5px;
+        }
+        ul{
+            padding: 0;
+        }
+        li{
+            list-style-type: none;
+        }
+        li::before{
+            content:url(file.jpg);
+        }
+        a>img{
+            display: none;
+        }
+        a:hover img{
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Форматы файлов.</h1>
+    <div>
+        .DOC или .doc (от англ. <img src="ne.png" alt="arrow"><a href="https://ru.wikipedia.org/wiki/.doc" target="_blank">document</a>) - расширение имени файла, используемое для файлов,
+        представляющих текст, с разметкой или без. Расширение .DOC часто использовалось для  
+        обозначения простых текстовых файлов без формирования, однако позже стало
+        использоваться для двоичных форматов с разметкой. <br>
+        <img src="word.jpg" alt="word"><a href="https://www.microsoft.com/ru-ru/microsoft-365/word" target="_blank">Документ MS Word</a>
+    </div>
+    <div>
+        Portable Document Formst (<img src="ne.png" alt="arrow"><a href="https://ru.wikipedia.org/wiki/Portable_Document_Format" target="_blank">PDF</a>) - межплатформенный формат электронных документов,
+        разработанный фирмой Adobe Systems с использованием ряда возможностей языка
+        Postscript. <br>
+        <img src="pdf.png" alt="pdf"><a href="https://get.adobe.com/ru/reader/" target="_blank">Документ PDF</a>
+    </div>
+    <div>
+        ZIP - полпулярный формат сжатия данных и архивации файлов. Файл в этом формате
+        обычно имеет расширение <img src="ne.png" alt="arrow"><a href="https://ru.wikipedia.org/wiki/ZIP" target="_blank">.zip</a> и хранится в сжатом или несжатом виде один или несколько
+        файлов, которое можно из него извлечь путем распаковки с помощью специальной
+        программы.<br>
+        <img src="zip.gif" alt="zip"><a href="https://www.winzip.com/en/" target="_blank">Архив</a>   
+    </div>
+    <h2>
+        Это список файлов
+    </h2>
+    <ul>
+        <li class="word"><a href="https://www.microsoft.com/ru-ru/microsoft-365/word" target="_blank">Документ MS Word<img src="word.jpg" alt="word"></a></li>
+        <li class="pdf"><a href="https://get.adobe.com/ru/reader/" target="_blank">Документ PDF<img src="pdf.png" alt="pdf"></a></li>
+        <li class="zip"><a href="https://www.winzip.com/en/" target="_blank">Архив<img src="zip.gif" alt="zip"></a></li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .header {
+            text-align: center;
+            background-color: aqua;
+        }
+
+        tr {
+            text-align: left;
+        }
+
+        tr:not(.header)>th,
+        td {
+            border: 1px dashed;
+            border-collapse: collapse;
+            border-top: 0;
+        }
+
+        .second,
+        .fourth {
+            background-color: bisque;
+        }
+
+        tr:last-child>td {
+            text-align: center;
+            border: 0;
+        }
+
+        .header:hover,
+        .first:hover,
+        .second:hover,
+        .third:hover,
+        .fourth:hover,
+        .fifth:hover {
+            background-color: rgb(168, 209, 212);
+            transition: background 0.5s ease;
+        }
+
+        .btn {
+            width: 150px;
+            height: 30px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 6px;
+        }
+    </style>
+    </head>
+
+    <body>
+        <div>
+            <table>
+                <colgroup>
+                    <col span="1">
+                </colgroup>
+                <tr class="header">
+                    <th>ФИО</th>
+                    <th>пол</th>
+                    <th>должность</th>
+                    <th>дата рож.</th>
+                    <th>Данные 01</th>
+                    <th>Данные 02</th>
+                </tr>
+                <tr class="first">
+                    <th>Иванов Иван Иванович</th>
+                    <td>М</td>
+                    <td>начальник</td>
+                    <td>01.01.1960</td>
+                    <td>4567</td>
+                    <td>3453</td>
+                </tr>
+                <tr class="second">
+                    <th>Петрова Илонна Петровна</th>
+                    <td>Ж</td>
+                    <td>секретарь</td>
+                    <td>01.01.1989</td>
+                    <td>98795</td>
+                    <td>46523</td>
+                </tr>
+                <tr class="third">
+                    <th>Сидоров Илья Игоревич</th>
+                    <td>М</td>
+                    <td>бухгалтер</td>
+                    <td>01.01.1979</td>
+                    <td>743434</td>
+                    <td>987979</td>
+                </tr>
+                <tr class="fourth">
+                    <th>Пупин Фёдор Фёдорович</th>
+                    <td>М</td>
+                    <td>водитель</td>
+                    <td>01.01.1963</td>
+                    <td>74323434</td>
+                    <td>9232379</td>
+                </tr>
+                <tr class="fifth">
+                    <th>Крупин Сергей Иванович</th>
+                    <td>М</td>
+                    <td>водитель 2</td>
+                    <td>01.01.1983</td>
+                    <td>3234534</td>
+                    <td>923123379</td>
+                </tr>
+                <tr>
+                    <td colspan="6">ДАННЫЕ О СОТРУДНИКАХ</td>
+                </tr>
+            </table>
+            <button class="btn">Нет скрытых строк</button>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+            integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous">
+            </script>
+        <script>
+            $(document).ready(function ($) {
+                $('.first').on('click', function () {
+                    $('.first').hide();
+                });
+                $('.second').on('click', function () {
+                    $('.second').hide();
+                });
+                $('.third').on('click', function () {
+                    $('.third').hide();
+                });
+                $('.fourth').on('click', function () {
+                    $('.fourth').hide();
+                });
+                $('.fifth').on('click', function () {
+                    $('.fifth').hide();
+                });
+                $('tr').click(function(){
+                $('.btn').text("Показать все данные");
+                });
+                $(".btn").click(function () {
+                    $("tr").show();
+                    $('.btn').text("Нет скрытых строк");
+                });
+                
+            })
+        </script>
+    </body>
+
+</html>
